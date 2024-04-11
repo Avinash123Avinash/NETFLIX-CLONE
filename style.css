@@ -1,0 +1,318 @@
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #000;
+    color: #fff;
+
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    position: relative;
+   
+}
+nav{
+    max-width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+  
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    z-index: 10;
+    
+    
+}
+nav button{
+    border: 0;
+    outline:0;
+    cursor: pointer;
+    background: #db0001;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 20px;
+    font-size: 12px;
+    margin-left: 10px;
+    z-index: 10;
+
+   
+}
+.language-btn{
+    display: inline-flex;
+    background: transparent;
+    align-items: centre;
+    border: 1px solid #fff;
+    padding: 7px;
+
+
+}
+.language-btn img{
+  width: 10px;
+  margin-left: 10px;
+
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    transform: translate(-50%,-50%);
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 45px;
+    line-height: 70px;
+    font-weight: 700;
+    max-width:780px;
+}
+.header-content h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    /* max-width:780px; */
+}
+.emailid{
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    
+}
+.emailid input{
+flex: 1;
+border: 0;
+margin-left: 20px;
+outline: 0;
+}
+.emailid button{
+    background: #db0001;
+    color: #fff;
+    border: 0;
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+
+}
+.feature{
+    padding: 50px 12%;
+    font-size: 22px;
+    
+}
+.row{
+    display: flex;
+    align-items: centre;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.feature-content {
+    margin-top: 40px;
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+display: block;
+margin: auto;
+width: 90%;
+}
+.feature-content h2{
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 700;
+    max-width:780px;
+
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h1{
+    font-size: 45px;
+    font-weight: 700;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 720px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding:5px;
+
+}
+.accordion li label{
+    display:flex;
+    font-size:18px;
+    align-items: center;
+    padding: 20px;
+    font-weight: 500;
+    background: #303030;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+}
+input[type="radio"]{
+    display: none;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+   
+}
+.accordion .content{
+    text-align: left;
+    padding:  0  20px;
+    background: #303030;
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 200px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+} 
+.faq .emailid{
+    max-width: 600px;
+    margin: 20px  auto 30px ;
+
+}
+.faq small{
+    font-size: 30px;
+}
+ 
+/* .row .col{
+    max-width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    /* align-items: left; 
+    height: 100px;
+     */
+
+ .footer .col{
+    flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}  
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333; 
+    color:#777 ;
+}
+.footer h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.col a{
+    display: block;
+    color: #777;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 10px;
+    /* text-decoration: none; */
+}
+.row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-txt{
+    font-size:18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width:600px){
+.logo{
+    width: 100px;
+}
+nav button{
+    padding: 5px 10px;
+}
+nav .language-btn{
+    padding: 4px 8px;
+}
+.header-content{
+    position: unset;
+    padding-top: 150px;
+    transform: none;
+}
+.header-content h1{
+    font-size: 30px;
+}
+.emailid button{
+font-size: 12px;
+padding: 10px 15px;
+}
+.feature h2{
+    font-size: 30px;
+}
+.feature p{
+    font-size: 15px; 
+}
+.feature-content, .img-col{
+flex-basis: 100%;
+}
+.row:nth-child(2), .row:nth-child(4){
+    flex-direction: column-reverse;
+}
+.feature-content .row{
+    padding: 10px 0;
+}
+.faq h1{
+    font-size: 20px;
+}
+.accordion .content{
+font-size: 14px;
+}
+.accordion li label{
+padding: 10px;
+font-size: 14px;
+}
+.faq{
+    text-align: center;
+}
+.label::after{
+    font-size: 22px;
+}
+}
+
+
+
+    
+
+
+
+
